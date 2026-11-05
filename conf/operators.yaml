@@ -1,0 +1,17 @@
+operators:
+  - id: h3_reference_blend
+    contract: FP32 native-order H3 reference-blend scheduler update
+  - id: h3_rms_norm
+    contract: BF16 D128 or D5376, multiply weight in FP32 before final cast
+    tiers: [baseline, tle, sm90]
+  - id: h3_rotary_tables
+    contract: SM90 FP64 frequency power and FP32 trigonometric position tables
+    tiers: [sm90]
+  - id: h3_swiglu
+    contract: packed value-gate projection, input-precision SiLU boundary
+  - id: h3_vae_qk_norm_rope
+    contract: D64 RMS and 48-channel split rotary embedding
+  - id: h3_vae_residual
+    contract: FP32 residual state and FP16 update
+  - id: h3_vae_residual_norm
+    contract: D2048 FP32 residual RMS and FP16 normalized output
