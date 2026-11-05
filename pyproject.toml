@@ -21,9 +21,6 @@ Repository = "https://github.com/CherryLemon/FlagGems-lightx2v"
 [tool.setuptools.packages.find]
 where = ["src"]
 
-[tool.setuptools.package-data]
-"flaggems_lightx2v" = ["conf/*.json"]
-
 [tool.black]
 line-length = 88
 
